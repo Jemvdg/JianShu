@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/lib/bootstrap.css">
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+
+<body>
+    <header>
+        <nav class="navbar navbar-fixed-top">
+            <div class="container">
+                <div class="row">
+                    <div class="navbar-brand col-lg-1">
+                        <a href="index.html">简书</a>
+                    </div>
+
+                    <ul class="nav navbar-nav col-lg-3 col-lg-offset-3">
+                        <li class="homepages"><a href="index.html"><i class="fa fa-compass"></i>首页</a></li>
+                        <li class="downloadApp">
+                            <a href="#"><img src="img/downloadApp.png" alt="fff">下载App</a>
+                        </li>
+                    </ul>
+                    <form class="navbar-form col-lg-3 " action="/">
+                        <div class="form-group  pull-left">
+                            <div class="dropdown">
+                                <input class="form-control search-box" id="search-box" data-toggle="dropdown" type="text" placeholder="搜索(如搜索'强'字)">
+                                <dl class="dropdown-menu search-menu" aria-labelledby="search-box">
+                                    <dt class='recent'>最近热搜</dt>
+                                    <dd class='recent'>李XX</dd>
+                                    <dd class='recent'>李XX</dd>
+                                    <dd class='recent'>李XX</dd>
+                                    <dd class='recent'>李XX</dd>
+                                </dl>
+                            </div>
+                        </div>
+                        <div class="form-group pull-right">
+                            <button class="form-control" type="button"><i class="fa fa-search"></i></button>
+                        </div>
+                    </form>
+
+                    <div class="navbar-right col-lg-4">
+                        <button class="fonts btn navbar-btn">Aa</button>
+                        <button class="login btn navbar-btn" type="button" data-toggle="modal" data-target="#login">登录</button>
+                        <button class="regsiter btn navbar-btn">注册</button>
+                        <button class="write btn navbar-btn btn-danger">写文章</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div class="modal fade" id="login">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <div class="modal-title">
+                            <button class="btn close" type="button" data-dismiss="modal"><span> &times</span></button>
+                            <h1>登录</h1>
+                        </div>
+                    </div>
+                    <div class="modal-body">
+                        <form action="/">
+                            <div class="form-group">
+                                <label for="loginName">用户名</label>
+                                <input class="form-control" type="text" id="loginName">
+                                <p id="userTip" class="help"></p>
+                            </div>
+                            <div class="form-group">
+                                <label for="loginPassword">密码</label>
+                                <input class="form-control" type="text" id="loginPassword">
+                                <p id="passwordTip" class="help"></p>
+                            </div>
+                            <div class="checkbox">
+                                <label for="markPassword">
+                                              <input type="checkbox" id="markPassword">是否记住密码
+                                               </label>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-defalut" data-dismiss="modal">关闭</button>
+                        <button id="loginBtn" class="btn btn-primary">登录</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div id="banner_box">
+            </div>
+        </div>
+    </header>
+
+    <section class="main container">
+        <div class="row">
+
+            <div class="context col-lg-8">
+                <div class="more-topic col-lg-12" id="topic_box">
+                </div>
+                <div class="title-list col-lg-12" id="title_box">
+                </div>
+            </div>
+
+
+            <div class="sidebar col-lg-4">
+                <div class="classify">
+                    <a href="#"><img class="img-responsive" src="img/rank.png" alt="fff"></a>
+                </div>
+                <div class="classify">
+                    <a href="#"><img class="img-responsive" src="img/daynew.png" alt="fff"></a>
+                </div>
+                <div class="classify">
+                    <a href="#"><img class="img-responsive" src="img/weekhot.png" alt="fff"></a>
+                </div>
+                <div class="classify">
+                    <a href="#"><img class="img-responsive" src="img/monthhot.png" alt="fff"></a>
+                </div>
+
+                <div class="download-app">
+                    <p><a href="#">下载简书手机App></a></p>
+                    <span>随时随地发现和创作内容</span>
+
+                    <div class="download-link">
+                        <a class="btn code" href="#"><i class="fa fa-qrcode"></i>扫码</a>
+                        <a class="btn android" href="#"><i class="fa fa-android"></i>安卓</a>
+                        <a class="btn ios" href="#"><i class="fa fa-apple"></i>IOS</a>
+                        <div class="scan"><img class="code img-responsive" src="img/code.png" alt="fff"></div>
+                    </div>
+
+                </div>
+
+                <div class="recommend">
+                    <div class="recommend-head">
+                        推荐作者
+                        <div class="recommend-ctrl pull-right">
+                            <span><small class="show-page">1</small>/<small class="all-page">42</small></span>
+                            <div class="btn-group btn-group-sm" role="group" aria-label="...">
+                                <button type="button" class="btn btn-default page-pre "><i class="fa fa-angle-left"></i></button>
+                                <button type="button" class="btn btn-default page-next"><i class="fa fa-angle-right"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="recommend_box">
+                    </div>
+                    <a href="javascript:void(0)" class="all-recommend text-center">查看全部 ></a>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <footer class="container">
+        <ul class="nav nav-pills">
+            <li><a href="#">关于简书</a></li>
+            <li><a href="#">联系我们</a></li>
+            <li><a href="#">加入我们</a></li>
+            <li><a href="#">作者成书计划</a></li>
+            <li><a href="#">帮助中心</a></li>
+            <li><a href="#">合作伙伴</a></li>
+        </ul>
+        <p>©2012-2017 上海佰集信息科技有限公司 / Tel:021-61995350 / 简书 / 沪ICP备11018329号-5 /</p>
+        <p><a href="#">沪公网安备31010602000064号</a><img src="img/foot.png" alt=""></p>
+    </footer>
+
+    <canvas></canvas>
+</body>
+
+
+
+<!--banner模板-->
+<script id="banner_tem" type="text/html">
+    <div id="banner" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            {{each slider item index}}
+            <li data-target="#banner" data-slide-to="{{index}}" {{if index===0}} class="active" {{/if}}></li>
+            {{/each}}
+        </ol>
+        <div class="carousel-inner" role="listbox">
+            {{each slider item index}}
+            <div class="item {{if index===0}}active{{/if}}">
+                <img src="{{item.sliderImg}}" alt="fff">
+            </div>
+            {{/each}}
+        </div>
+        <a class="left carousel-control" href="#banner" role="button" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
+        <a class="right carousel-control" href="#banner" role="button" data-slide="next"><i class="fa fa-chevron-right"></i></a>
+    </div>
+</script>
+
+<!--topic模板-->
+<script id="topic_tem" type="text/html">
+    <div class="btn-list">
+        {{each topic item index}}
+        <a class="btn" href="#"><img class="cover pull-left" src="{{item.topicImg}}" alt="fff">{{item.title}}</a>
+        {{/each}}
+        <a class="get-more" href="#">更多热门专题></a>
+    </div>
+</script>
+
+<!--title-lsit模板-->
+<script id="title_tem" type="text/html">
+    {{each titleItem item index}}
+    <div class="content">
+        <div class="writer">
+            <p><img src="{{item.head}}" alt="fff">{{item.name}} <span>{{item.time}}</span></p>
+        </div>
+        <div class="title-heading"><a href="titleMain.html" onclick="localStorage.title=$(this).html()">{{item.title}}</a></div>
+        <div class="text">{{item.text}} </div>
+        <div class="title-info">
+            <span class="label text-center ">{{item.type}}</span>
+            <span class="views details"><i class="fa fa-eye"></i>{{item.readNum}}</span>
+            <span class="comments details"><i class="fa fa-comment"></i>{{item.comment}}</span>
+            <span class="likes details"><i class="fa fa-heart"></i>{{item.like}}</span>
+            <span class="awards details"><i class="fa fa-money"></i>{{item.money}}</span>
+        </div>
+        <img class="cover img-responsive" src="{{item.cover}}" alt="fff">
+    </div>
+    {{/each}}
+    <div class="col-lg-12 getmore-title btn btn-primary text-center">查看更多 </div>
+</script>
+
+<!--recommend模板-->
+<script id="recommend_tem" type="text/html">
+    {{each recommendItem item index}} {{if index
+    <5}} <div class="writer-info">
+        <img class="pull-left img-responsive" src="{{item.cover}}" alt="fff">
+        <p class="name">{{item.name}}<span class="pull-right">+关注</span></p>
+        <p class="detail">写了<span>{{item.readNum}}字</span> - <span>17.6k喜欢</span></p>
+        </div>
+        {{/if}} {{/each}}
+</script>
+
+
+
+<script src="js/lib/require.js" data-main="js/index.js"></script>
+<script src="js/config.js"></script>
+
+
+
+</html>
